@@ -2,7 +2,6 @@
 Repositório criado para armazenar e compartilhar experiencias e resoluções de desafios propostos em campeonatos de Capture The Flag(CTF) quais resolvi.
 
 ##### O QUE SÃO CTFS?
--
 CTF significa  _Capture the Flag_. No âmbito da informática, são competições que envolvem diversas competências dos profissionais/estudantes/entusiastas para a resolução de desafios relacionados à  _infosec_  (segurança da informação), com o objetivo de capturar a bandeira (normalmente um código) e pontuar.
 
 ##### TIPOS DE CTFS:
