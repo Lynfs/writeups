@@ -23,6 +23,7 @@ Existem dois tipos de CTFs, os  _Jeopardy-style_  (estilo  _Quiz_), que normalme
 -   **PPC**  (Professional Proramming and Coding). Ex: [PPC 7 – ADCTF 2014](https://ctf-br.org/wiki/adctf/adctf2014/p7-reader-day-7-2/).
 
 Para saber mais, acesse:  [https://ctftime.org/ctf-wtf/](https://ctftime.org/ctf-wtf/) 
+
 [Fonte da definição.](https://ctf-br.org/sobre/)
 
 `As resoluções serão separadas por categoria, sendo elas: web, pwn, programming, Reverse Engineering, Miscellaneous, Forensics, Networking, remote exploitation, etc... `
