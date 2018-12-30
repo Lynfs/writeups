@@ -41,7 +41,7 @@ Ao baixarmos e extrairmos o arquivo zip, obtemos o arquivo Poet:
 
 ![IDA screenshot](https://i.imgur.com/XookLxm.png)
 
-*No endereço **00000000004009D3** é possível vizualizar uma chamada à função **rate_poem( )**. Hora de analizar esta função.*
+*No endereço **00000000004009D3** é possível vizualizar uma chamada à função **rate_poem( )**. Vejamos o que ela faz.*
 
     .text:000000000040080C loc_40080C:                             ; CODE XREF: rate_poem+8B↓j
     .text:000000000040080C                                         ; rate_poem+A2↓j ...
