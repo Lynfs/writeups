@@ -154,5 +154,7 @@ Apesar das palavras da função nos retornarem pontos acima de Zero:*
 ---
 ## Recomendações para entendimento geral
 [x64_cheatsheet.pdf](https://cs.brown.edu/courses/cs033/docs/guides/x64_cheatsheet.pdf)
+
 [Assembly Control Flow](https://en.wikibooks.org/wiki/X86_Assembly/Control_Flow)
+
 [CMPx86](https://www.felixcloutier.com/x86/cmp)
