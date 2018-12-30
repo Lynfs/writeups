@@ -126,7 +126,7 @@ Apesar das palavras da função nos retornarem pontos acima de Zero:*
  *Após uma depuração, pode-se perceber que o responsável pelo nosso input está em **[rbx+1088]** Desta forma, podemos montar nosso script.*
  No caso em questão, foi utilizada a lib [pwntools](http://docs.pwntools.com/en/stable/) no [python2.7](https://www.python.org/download/releases/2.7/).
 
-*Sabendo que **rbx** precisa receber **1088** bytes e que o **cmpl** trabalha com os últimos**4 bytes**, enviamos **1084** bytes aleatórios + valor à ser comparado nos últimos .*
+*Sabendo que **rbx** precisa receber **1088** bytes e que o **cmp** trabalha com os últimos**4 bytes**, enviamos **1084** bytes aleatórios + valor à ser comparado nos últimos .*
    
 
     from pwn import *
