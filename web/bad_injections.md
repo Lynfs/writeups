@@ -114,3 +114,6 @@ a saída:
 ## Considerações finais
 
 Não conseguimos matar a flag no decorrer do campeonato, mas depois de apanhar mais que saco que pancadas, a flag surgiu e com ela o aprendizado. Parabéns à equipe Fireshell por proporcionar um ótimo campeonato.
+
+
+*[RSS W3schools](https://www.w3schools.com/xml/xml_rss.asp)
