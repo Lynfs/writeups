@@ -4,17 +4,17 @@
 
 ![index](https://i.imgur.com/vtZ1BiQ.png)
 
-`Acessando as 3 primeiras abas disponíveis **home**, **about** e **contact**, nada de útil nos é apresentado. Mas, acessando a aba **List**, a página nos retorna o icone de uma "imagem
-corrompida" ao lado da imagem carregada.`
+Acessando as 3 primeiras abas disponíveis **home**, **about** e **contact**, nada de útil nos é apresentado. Mas, acessando a aba **List**, a página nos retorna o icone de uma "imagem
+corrompida" ao lado da imagem carregada.
 
-`Analisando a source desta página, é possível ver uma passagem de parâmetros:`
+Analisando a source desta página, é possível ver uma passagem de parâmetros:
 
 ```
 download?file=files/test.txt&hash=293d05cb2ced82858519bdec71a0354b
 
 ```
 
-`eis a "imagem corrompida". Com estes parâmetros, podemos ler qualquer arquivo dentro do server. Os requisitos são:`
+eis a "imagem corrompida". Com estes parâmetros, podemos ler qualquer arquivo dentro do server. Os requisitos são:
 * o path do arquivo estar exato
 * o parâmetro **hash** deve conter o md5 do arquivo buscado.
 
@@ -23,7 +23,7 @@ download?file=files/test.txt&hash=293d05cb2ced82858519bdec71a0354b
 
 ## Exploração
 
-`Varrendo o server, é possível encontrar o arquivo **Routes.php** dentro do diretório **/app/** onde é necessária alguma entrada de solicitação http.`
+Varrendo o server, é possível encontrar o arquivo **Routes.php** dentro do diretório **/app/** onde é necessária alguma entrada de solicitação http.
 
     ...
     ...
@@ -42,7 +42,7 @@ download?file=files/test.txt&hash=293d05cb2ced82858519bdec71a0354b
     ...
     ...
 
-`E o arquivo **Custom.php** em **/app/Controllers/** .`
+E o arquivo **Custom.php** em **/app/Controllers/** .
 
     <br />
     <b>Notice</b>:  Undefined variable: type in <b>/app/Controllers/Download.php</b> on line <b>21</b><br />
@@ -60,13 +60,13 @@ download?file=files/test.txt&hash=293d05cb2ced82858519bdec71a0354b
      ?>
 
 
-`Utilizando do XXE, também podemos retornar arquivos do servidor.`
+Utilizando do XXE, também podemos retornar arquivos do servidor.
 
 ![xxe](https://i.imgur.com/5aKPJVP.png)
 
 ## Localhost bypass
 
-`no arquivo **Routes.php** citado acima, também é possível ver o seguinte trecho de código:`
+no arquivo **Routes.php** citado acima, também é possível ver o seguinte trecho de código:
 
 ```
 Route::set('admin',function(){
@@ -82,17 +82,17 @@ Route::set('admin',function(){
 })
 ```
 
-`Esse trecho verifica se a solicitação vem do localhost dentro de uma estrutura condicional. Caso venha, realizada a chamda em Admin::sort.`
+Esse trecho verifica se a solicitação vem do localhost dentro de uma estrutura condicional. Caso venha, realizada a chamda em Admin::sort.
 
-`Observando o arquivo **Admin.php** (também baixado fuçando o server), vemos que Admin::sort contém:`
+Observando o arquivo **Admin.php** (também baixado fuçando o server), vemos que Admin::sort contém:
 
     usort($data, create_function('$a, $b', 'return strcmp($a->'.$order.',$b->'.$order.');'));
 
 
-`que nos dá uma clara injeção de código.`
+que nos dá uma clara injeção de código.
 
 ---
-`Desta forma, precisamos utilizar do XXE fazer o bypass da verificação do localhost e logo depois fazer uma request para /Admin, que nos retorna a execução remota de código.`
+Desta forma, precisamos utilizar do XXE fazer o bypass da verificação do localhost e logo depois fazer uma request para /Admin, que nos retorna a execução remota de código.
 
 o árduo payload:
 
@@ -105,7 +105,7 @@ o árduo payload:
 
 * o arquivo **file.xml** deve ser upado no seu servidor, com um rss válido com a route e adminsort para a reques.
 
-`a saída:`
+a saída:
 
 ![flag](https://i.imgur.com/FyBD4eq.png)
 
