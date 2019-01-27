@@ -103,7 +103,7 @@ o árduo payload:
     ]>
     <root><name>&xxe;</name></root>
 
-* o arquivo **file.xml** deve ser upado no seu servidor, com um rss válido com a route e adminsort para a reques.
+* o arquivo **file.xml** deve ser upado no seu servidor, com um rss válido com a route e adminsort para a request.
 
 a saída:
 
